@@ -9,7 +9,7 @@ allure-report/
 
 # Environment and auth
 .env
-auth/storageState.json
+auth/storage
 
 # Backup files
 playwright.config.original.ts

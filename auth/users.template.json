@@ -1,0 +1,4 @@
+[
+    {"id":"user1","emailEnv":"TEST_USER_1_EMAIL","passwordEnv":"TEST_USER_1_PASSWORD"},
+    {"id":"user2","emailEnv":"TEST_USER_2_EMAIL","passwordEnv":"TEST_USER_2_PASSWORD"}
+]

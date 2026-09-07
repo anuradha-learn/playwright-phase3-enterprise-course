@@ -3,7 +3,40 @@ import { AddressData } from '../utils/types';
 
 export class AddressPage {
 
+    // ─────────────────────────────────────────────
+    // Locators — readonly properties, initialized once
+    // ─────────────────────────────────────────────
+    private readonly editBillingLink;
+    private readonly billingAddressHeading;
+    private readonly firstNameField;
+    private readonly lastNameField;
+    private readonly streetField;
+    private readonly cityField;
+    private readonly saveButton;
+    private readonly successMessage;
+    private readonly billingSection;
+
     constructor(private page: Page) {
+
+        this.editBillingLink = this.page.getByRole('link', {
+            name: 'Edit Billing address'
+        });
+        this.billingAddressHeading = this.page.getByRole('heading', {
+            name: 'Billing address'
+        });
+        this.firstNameField = this.page.getByLabel('First name');
+        this.lastNameField = this.page.getByLabel('Last name');
+        this.streetField = this.page.getByLabel('Street address');
+        this.cityField = this.page.getByLabel('Town / City');
+        this.saveButton = this.page.getByRole('button', {
+            name: 'SAVE ADDRESS'
+        });
+        this.successMessage = this.page.getByText(
+            'Address changed successfully.'
+        );
+        this.billingSection = this.page.locator(
+            '[class*="woocommerce-Address"]'
+        );
 
     }
 
@@ -11,53 +44,53 @@ export class AddressPage {
     // Locators
     // ─────────────────────────────────────────────
 
-    private get editBillingLink() {
-        return this.page.getByRole('link', {
-            name: 'Edit Billing address'
-        });
-    }
+    // private get editBillingLink() {
+    //     return this.page.getByRole('link', {
+    //         name: 'Edit Billing address'
+    //     });
+    // }
 
-    private get billingAddressHeading() {
-        return this.page.getByRole('heading', {
-            name: 'Billing address'
-        })
-    }
+    // private get billingAddressHeading() {
+    //     return this.page.getByRole('heading', {
+    //         name: 'Billing address'
+    //     })
+    // }
 
-    private get firstNameField() {
-        return this.page.getByLabel('First name');
-    }
+    // private get firstNameField() {
+    //     return this.page.getByLabel('First name');
+    // }
 
-    private get lastNameField() {
-        return this.page
-            .getByLabel('Last name')
-    }
+    // private get lastNameField() {
+    //     return this.page
+    //         .getByLabel('Last name')
+    // }
 
-    private get streetField() {
-        return this.page.getByLabel('Street address');
-    }
+    // private get streetField() {
+    //     return this.page.getByLabel('Street address');
+    // }
 
-    private get cityField() {
-        return this.page.getByLabel('Town / City');
-    }
+    // private get cityField() {
+    //     return this.page.getByLabel('Town / City');
+    // }
 
-    private get saveButton() {
-        return this.page.getByRole('button', {
-            name: 'SAVE ADDRESS'
-        });
-    }
+    // private get saveButton() {
+    //     return this.page.getByRole('button', {
+    //         name: 'SAVE ADDRESS'
+    //     });
+    // }
 
-    private get successMessage() {
-        return this.page.getByText(
-            'Address changed successfully.'
-        )
-    }
+    // private get successMessage() {
+    //     return this.page.getByText(
+    //         'Address changed successfully.'
+    //     )
+    // }
 
-    private get billingSection() {
-        return this.page.locator(
-            '[class*="woocommerce-Address"]'
-        );
+    // private get billingSection() {
+    //     return this.page.locator(
+    //         '[class*="woocommerce-Address"]'
+    //     );
 
-    }
+    // }
 
     // ─────────────────────────────────────────────
     // Actions

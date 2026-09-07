@@ -1,45 +1,71 @@
 import { Page, expect } from '@playwright/test';
 
 export class CheckoutPage {
+
+        // ─────────────────────────────────────────────
+    // Locators — readonly properties, initialized once
+    // ─────────────────────────────────────────────
+    private readonly checkoutButton;
+    private readonly placeOrderButton;
+    private readonly confirmationMessage;
+    private readonly orderIdLocator;
+    private readonly couponInput;
+    private readonly applyCouponButton;
+
     constructor(private page: Page) {
+
+         this.checkoutButton = this.page.getByRole('link', {
+            name: /proceed to checkout/i
+        });
+        this.placeOrderButton = this.page.getByRole('button', {
+            name: /place order/i
+        });
+        this.confirmationMessage = this.page.getByText('Thank you. Your order has');
+        this.orderIdLocator = this.page.getByRole('listitem')
+            .filter({ hasText: 'Order number:' })
+            .locator('strong');
+        this.couponInput = this.page.getByPlaceholder('Coupon code');
+        this.applyCouponButton = this.page.getByRole('button', {
+            name: /apply coupon/i
+        });
     }
 
     // ─────────────────────────────────────────────
     // Locators
     // ─────────────────────────────────────────────
 
-    private get checkoutButton() {
-        return this.page.getByRole('link', {
-            name: /proceed to checkout/i
-        }
-    );
-    }
+    // private get checkoutButton() {
+    //     return this.page.getByRole('link', {
+    //         name: /proceed to checkout/i
+    //     }
+    // );
+    // }
 
-    private get placeOrderButton() {
-        return this.page.getByRole('button', {
-            name: /place order/i
-        });
-    }
+    // private get placeOrderButton() {
+    //     return this.page.getByRole('button', {
+    //         name: /place order/i
+    //     });
+    // }
 
-    private get confirmationMessage() {
-        return this.page.getByText('Thank you. Your order has');
-    }
+    // private get confirmationMessage() {
+    //     return this.page.getByText('Thank you. Your order has');
+    // }
 
-     private get orderIdLocator() {
-        return this.page.getByRole('listitem')
-            .filter({ hasText: 'Order number:' })
-            .locator('strong');
-    }
+    //  private get orderIdLocator() {
+    //     return this.page.getByRole('listitem')
+    //         .filter({ hasText: 'Order number:' })
+    //         .locator('strong');
+    // }
 
-    private get couponInput() {
-        return this.page.getByPlaceholder('Coupon code');
-    }
+    // private get couponInput() {
+    //     return this.page.getByPlaceholder('Coupon code');
+    // }
 
-    private get applyCouponButton() {
-        return this.page.getByRole('button', {
-            name: /apply coupon/i
-        });
-    }
+    // private get applyCouponButton() {
+    //     return this.page.getByRole('button', {
+    //         name: /apply coupon/i
+    //     });
+    // }
 
     private escapeRegExp(value: string) {
         return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');

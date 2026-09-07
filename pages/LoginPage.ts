@@ -1,34 +1,54 @@
 import { Page, expect } from '@playwright/test';
 export class LoginPage {
 
+     // ─────────────────────────────────────────────
+    // Locators — readonly properties, initialized once
+    // ─────────────────────────────────────────────
+    private readonly usernameField;
+    private readonly passwordField;
+    private readonly loginButton;
+    private readonly logoutLink;
+
+
     constructor(private page: Page) {
+        this.usernameField = this.page.getByRole('textbox', {
+            name: 'Username or email address'
+        });
+        this.passwordField = this.page.getByRole('textbox', {
+            name: 'Password'
+        });
+        this.loginButton = this.page.getByRole('button', {
+            name: 'Log in'
+        });
+        this.logoutLink = this.page.getByLabel('Account pages')
+            .getByRole('link', { name: 'Log out' });
 
     }
     // ─────────────────────────────────────────────
     // Locators — private, used only inside this class
     // ─────────────────────────────────────────────
-    private get usernameField(){
-        return this.page.getByRole('textbox', {
-        name: 'Username or email address'
-    })
-}
+//     private get usernameField(){
+//         return this.page.getByRole('textbox', {
+//         name: 'Username or email address'
+//     })
+// }
 
-private get passwordField() {
-        return this.page.getByRole('textbox', {
-            name: 'Password'
-        });
-    }
+// private get passwordField() {
+//         return this.page.getByRole('textbox', {
+//             name: 'Password'
+//         });
+//     }
 
-    private get loginButton() {
-        return this.page.getByRole('button', {
-            name: 'Log in'
-        });
-    }
+//     private get loginButton() {
+//         return this.page.getByRole('button', {
+//             name: 'Log in'
+//         });
+//     }
 
-    private get logoutLink() {
-        return this.page.getByLabel('Account pages')
-            .getByRole('link', { name: 'Log out' });
-    }
+//     private get logoutLink() {
+//         return this.page.getByLabel('Account pages')
+//             .getByRole('link', { name: 'Log out' });
+//     }
 
 
     // ─────────────────────────────────────────────

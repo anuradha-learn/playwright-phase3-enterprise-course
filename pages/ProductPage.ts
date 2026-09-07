@@ -5,6 +5,16 @@ export class ProductPage {
 
     constructor(private page: Page) { }
 
+       // ─────────────────────────────────────────────
+    // Locators — private methods for dynamic locators
+    // ─────────────────────────────────────────────
+
+    private getProductNameHeading(name: string) {
+        return this.page.getByRole('heading', {
+            name: name
+        });
+    }
+
     // ─────────────────────────────────────────────
     // Actions
     // ─────────────────────────────────────────────
@@ -12,9 +22,7 @@ export class ProductPage {
     async verifyProductName(name: string) {
 
         await expect(
-            this.page.getByRole('heading', {
-                name: name
-            })
+            this.getProductNameHeading(name)
         ).toBeVisible();
     }
 

@@ -1,28 +1,40 @@
 import { Page, expect } from '@playwright/test';
 
 export class OrdersPage {
-    constructor(private page: Page) {}
+
+    private readonly myAccountLink;
+    private readonly ordersLink;
+    private readonly ordersTable;
+    constructor(private page: Page) {
+        
+        this.myAccountLink = this.page.getByRole('link', { name: /my account/i });
+        this.ordersLink = this.page.getByRole('link', {
+            name: 'Orders',
+            exact: true
+        });
+        this.ordersTable = this.page.getByRole('table');
+    }
 
 
     // ─────────────────────────────────────────────
     // Locators
     // ─────────────────────────────────────────────
 
-    private get myAccountLink() {
-        return this.page.getByRole('link', { name: /my account/i });
-    }
+    // private get myAccountLink() {
+    //     return this.page.getByRole('link', { name: /my account/i });
+    // }
 
-    private get ordersLink() {
-        return this.page.getByRole('link', {
-            name: 'Orders',
-            exact: true
-        });
-    }
+    // private get ordersLink() {
+    //     return this.page.getByRole('link', {
+    //         name: 'Orders',
+    //         exact: true
+    //     });
+    // }
 
 
-    private get ordersTable() {
-        return this.page.getByRole('table');
-    }
+    // private get ordersTable() {
+    //     return this.page.getByRole('table');
+    // }
 
     // ─────────────────────────────────────────────
     // Actions

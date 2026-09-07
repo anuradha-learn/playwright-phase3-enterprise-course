@@ -1,8 +1,10 @@
-import { test as base, expect, Page, BrowserContext } from '@playwright/test'
+import {test as base} from './parallelAuth'
+import { expect, Page, BrowserContext } from '@playwright/test'
+import { worker } from 'cluster'
 import path from 'path'
 
 //path of auth file
-const authFile = path.join(__dirname, '..', 'auth', 'storageState.json')
+// const authFile = path.join(__dirname, '..', 'auth', 'storageState.json')
 
 //declare the fixture type
 
@@ -10,11 +12,17 @@ type AuthFixtures = {
     loggedInPage: Page
 }
 
+// const authFile = testInfo.workerIndex === 0
+//     ? path.join(__dirname, '..', 'auth', 'user1-storageState.json')
+//     : testInfo.workerIndex === 1
+//     ? path.join(__dirname, '..', 'auth', 'user2-storageState.json')
+//     : path.join(__dirname, '..', 'auth', 'user3-storageState.json')
+
 //build the fixture
 
 export const test = base.extend<AuthFixtures>({
 
-    loggedInPage: async ({ browser }, use,testInfo) => {
+    loggedInPage: async ({ browser , workerStorageState }, use, testInfo) => {
         console.log("Fixture Started");
         console.log(`Worker : ${testInfo.workerIndex}`);
         console.log(`Test   : ${testInfo.title}`);
@@ -26,7 +34,7 @@ export const test = base.extend<AuthFixtures>({
   
 
         const context: BrowserContext = await browser.newContext({
-            storageState: authFile,
+            storageState: workerStorageState,
             recordVideo:{
                 dir:testInfo.outputDir
             }

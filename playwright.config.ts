@@ -7,15 +7,15 @@ dotenv.config({ quiet: true })
 
 // Validate required variables at startup
 if (!process.env.BASE_URL) throw new Error('BASE_URL is not set in .env');
-if (!process.env.DEMO_USER) throw new Error('DEMO_USER is not set in .env');
-if (!process.env.DEMO_PASS) throw new Error('DEMO_PASS is not set in .env');
+// if (!process.env.DEMO_USER) throw new Error('DEMO_USER is not set in .env');
+// if (!process.env.DEMO_PASS) throw new Error('DEMO_PASS is not set in .env');
 if (!process.env.API_BASE_URL) throw new Error('API_BASE_URL is not set in .env');
 
 
 
 
 export default defineConfig({ 
-    workers: process.env.CI ? 1 : undefined,
+    workers: process.env.CI ? 1 : 1,
     fullyParallel: false,
     timeout: 40 * 1000,
     expect: { timeout: 40 * 1000 },

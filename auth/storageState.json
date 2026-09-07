@@ -1,0 +1,133 @@
+{
+  "cookies": [
+    {
+      "name": "wordpress_sec_34d70385d4fc1bd6464bdf3511161392",
+      "value": "anuradha.learn%7C1788422247%7CvYgTP32KJ7lvQ9w2VaXxmw2vL4uiiJ4Y0qNlL9mB7Io%7Cc036ff7b6d49b805662acac42baa764d95b4360d052e14ad15619993d183e3bf",
+      "domain": "qa-cart.com",
+      "path": "/wp-content/plugins",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "wordpress_sec_34d70385d4fc1bd6464bdf3511161392",
+      "value": "anuradha.learn%7C1788422247%7CvYgTP32KJ7lvQ9w2VaXxmw2vL4uiiJ4Y0qNlL9mB7Io%7Cc036ff7b6d49b805662acac42baa764d95b4360d052e14ad15619993d183e3bf",
+      "domain": "qa-cart.com",
+      "path": "/wp-admin",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sbjs_migrations",
+      "value": "1418474375998%3D1",
+      "domain": ".qa-cart.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sbjs_current_add",
+      "value": "fd%3D2026-09-01%2007%3A57%3A25%7C%7C%7Cep%3Dhttps%3A%2F%2Fqa-cart.com%2F%7C%7C%7Crf%3D%28none%29",
+      "domain": ".qa-cart.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sbjs_first_add",
+      "value": "fd%3D2026-09-01%2007%3A57%3A25%7C%7C%7Cep%3Dhttps%3A%2F%2Fqa-cart.com%2F%7C%7C%7Crf%3D%28none%29",
+      "domain": ".qa-cart.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sbjs_current",
+      "value": "typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29",
+      "domain": ".qa-cart.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sbjs_first",
+      "value": "typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29",
+      "domain": ".qa-cart.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sbjs_udata",
+      "value": "vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Macintosh%3B%20Intel%20Mac%20OS%20X%2010_15_7%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20HeadlessChrome%2F149.0.7827.55%20Safari%2F537.36",
+      "domain": ".qa-cart.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_lscache_vary",
+      "value": "73dd3f25a3bc17db281ac6e8485c0ffc",
+      "domain": "qa-cart.com",
+      "path": "/",
+      "expires": 1788422247.304957,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "wordpress_logged_in_34d70385d4fc1bd6464bdf3511161392",
+      "value": "anuradha.learn%7C1788422247%7CvYgTP32KJ7lvQ9w2VaXxmw2vL4uiiJ4Y0qNlL9mB7Io%7C6f7ace69a0a24c19618c1b41886fce6d1fffbf663d48fb296ad8fe3d4f8c0914",
+      "domain": "qa-cart.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sbjs_session",
+      "value": "pgs%3D2%7C%7C%7Ccpg%3Dhttps%3A%2F%2Fqa-cart.com%2F",
+      "domain": ".qa-cart.com",
+      "path": "/",
+      "expires": 1788251247,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://qa-cart.com",
+      "localStorage": [
+        {
+          "name": "wc_cart_hash_42e07a6fb0efba4cfc1767210bc51039",
+          "value": ""
+        },
+        {
+          "name": "storeApiNonce",
+          "value": "{\"nonce\":\"6f17ff6bc2\",\"timestamp\":1788249447.85}"
+        },
+        {
+          "name": "storeApiCartData",
+          "value": "{\"coupons\":[],\"shippingRates\":[],\"shippingAddress\":{\"first_name\":\"\",\"last_name\":\"\",\"company\":\"\",\"address_1\":\"\",\"address_2\":\"\",\"city\":\"\",\"postcode\":\"\",\"country\":\"\",\"state\":\"\",\"phone\":\"\"},\"billingAddress\":{\"first_name\":\"\",\"last_name\":\"\",\"company\":\"\",\"address_1\":\"\",\"address_2\":\"\",\"city\":\"\",\"postcode\":\"\",\"country\":\"\",\"state\":\"\",\"phone\":\"\",\"email\":\"\"},\"items\":[],\"itemsCount\":0,\"itemsWeight\":0,\"crossSells\":[],\"needsShipping\":true,\"needsPayment\":false,\"hasCalculatedShipping\":true,\"fees\":[],\"totals\":{\"currency_code\":\"\",\"currency_symbol\":\"\",\"currency_minor_unit\":2,\"currency_decimal_separator\":\".\",\"currency_thousand_separator\":\",\",\"currency_prefix\":\"\",\"currency_suffix\":\"\",\"total_items\":\"0\",\"total_items_tax\":\"0\",\"total_fees\":\"0\",\"total_fees_tax\":\"0\",\"total_discount\":\"0\",\"total_discount_tax\":\"0\",\"total_shipping\":\"0\",\"total_shipping_tax\":\"0\",\"total_price\":\"0\",\"total_tax\":\"0\",\"tax_lines\":[]},\"errors\":[],\"paymentMethods\":[],\"paymentRequirements\":[],\"extensions\":{}}"
+        }
+      ]
+    }
+  ]
+}

@@ -16,12 +16,18 @@ jobs:
     runs-on: ubuntu-latest
     env:
       BASE_URL: ${{ secrets.BASE_URL }}
-      DEMO_USER: ${{ secrets.DEMO_USER }}
-      DEMO_PASS: ${{ secrets.DEMO_PASS }}
       API_BASE_URL: ${{ secrets.API_BASE_URL }}
       WC_BASE_URL: ${{ secrets.WC_BASE_URL }}
       WC_CONSUMER_KEY: ${{ secrets.WC_CONSUMER_KEY }}
       WC_CONSUMER_SECRET: ${{ secrets.WC_CONSUMER_SECRET }}
+      TEST_USER_1_EMAIL: ${{ secrets.TEST_USER_1_EMAIL }}
+      TEST_USER_1_PASSWORD: ${{ secrets.TEST_USER_1_PASSWORD }}
+      TEST_USER_2_EMAIL: ${{ secrets.TEST_USER_2_EMAIL }}
+      TEST_USER_2_PASSWORD: ${{ secrets.TEST_USER_2_PASSWORD }}
+      TEST_USER_3_EMAIL: ${{ secrets.TEST_USER_3_EMAIL }}
+      TEST_USER_3_PASSWORD: ${{ secrets.TEST_USER_3_PASSWORD }}
+      TEST_USER_4_EMAIL: ${{ secrets.TEST_USER_4_EMAIL }}
+      TEST_USER_4_PASSWORD: ${{ secrets.TEST_USER_4_PASSWORD }}
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4

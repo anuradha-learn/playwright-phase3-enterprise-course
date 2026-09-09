@@ -47,5 +47,25 @@ export default defineConfig({
             },
             dependencies: ['setup'],
         },
+        {
+    name: 'firefox',
+    testDir: './tests',
+    use: {
+        browserName: 'firefox',
+        headless: true,
+        baseURL: process.env.BASE_URL
+    },
+    dependencies: ['setup'],
+},
+        {
+            name: 'webkit',
+            testDir: './tests',
+            use: {
+                browserName: 'webkit',
+                headless: true,
+                baseURL: process.env.BASE_URL
+            },
+            dependencies: ['setup'],
+        }
     ],
 });

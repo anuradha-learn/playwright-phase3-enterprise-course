@@ -43,7 +43,7 @@ jobs:
         distribution: temurin
         java-version: '17' 
     - name: Run Playwright tests
-      run: npx playwright test --grep "${{github.event.inputs.tags || '@smoke'}}"
+      run: npx playwright test --project=chromium --project=firefox --project=webkit --workers=4
         
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}

@@ -20,7 +20,7 @@ export default defineConfig({
     timeout: 40 * 1000,
     expect: { timeout: 40 * 1000 },
     // globalTeardown: './global-teardown.ts',
-    reporter: [['html'],['allure-playwright']],
+    reporter: [['blob'],['html'],['allure-playwright']],
     retries:process.env.CI ? 2 : 1,
    use:{
     screenshot:'only-on-failure',
